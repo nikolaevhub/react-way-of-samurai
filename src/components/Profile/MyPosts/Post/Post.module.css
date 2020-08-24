@@ -1,3 +1,7 @@
 .item{
   color: beige;
 }
+
+.item img {
+  width: 50px;
+}
