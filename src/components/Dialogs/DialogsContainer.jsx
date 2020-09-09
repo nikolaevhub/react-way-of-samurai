@@ -4,6 +4,7 @@ import Dialogs from "./Dialogs";
 import {connect} from "react-redux";
 
 let mapStateToProps = (state) => {
+    console.warn(state)
     return {
         dialogsPage: state.dialogsPage,
         newMessageText: state.dialogsPage.newMessageText
