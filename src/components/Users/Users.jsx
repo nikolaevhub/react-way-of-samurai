@@ -31,26 +31,32 @@ let Users = (props) => {
                          </NavLink>
                         </div>
                     <div>
-                            {u.followed ?
-                                <button onClick={() => {
-                                    usersApi.unfollowRequest(u.id).then(data => {
-                                            if (data.resultCode === 0) {
-                                                props.unfollow(u.id)
+                            {
+                                u.followed ?
+                                    <button disabled={props.followingInProgress}
+                                            onClick={() => {
+                                                props.toggleFollowingProgress(true);
+                                                usersApi.unfollowRequest(u.id).then(data => {
+                                                        if (data.resultCode === 0) {
+                                                            props.unfollow(u.id)
+                                                        }
+                                                        props.toggleFollowingProgress(false)
+                                                    }
+                                                );
                                             }
-                                        }
-                                    );
-                                }
-                                }>Unfollow</button> :
-                                <button onClick={() => {
-                                    usersApi.followRequest(u.id).then(data => {
-                                            if (data.resultCode === 0) {
-                                                props.follow(u.id)
+                                            }>Unfollow</button> :
+                                    <button disabled={props.followingInProgress}
+                                            onClick={() => {
+                                                props.toggleFollowingProgress(true);
+                                                usersApi.followRequest(u.id).then(data => {
+                                                        if (data.resultCode === 0) {
+                                                            props.follow(u.id)
+                                                        }
+                                                        props.toggleFollowingProgress(false)
+                                                    }
+                                                );
                                             }
-                                        }
-                                    );
-
-                                }
-                                }>Follow</button>
+                                    }>Follow</button>
                             }
                     </div>
                 </span>
