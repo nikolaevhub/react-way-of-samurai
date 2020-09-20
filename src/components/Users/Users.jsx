@@ -2,7 +2,6 @@ import React from "react";
 import defaultAvatar from "../../assets/DefaultAvatar.png";
 import s from "./Users.module.css";
 import {NavLink} from "react-router-dom";
-import {usersApi} from "../../api/api";
 
 let Users = (props) => {
 
