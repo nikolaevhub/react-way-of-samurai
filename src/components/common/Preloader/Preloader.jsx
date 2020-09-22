@@ -4,7 +4,7 @@ import preloader from "../../../assets/Preloader.gif";
 
 let Preloader = (props) => {
     return <div>
-        <img className={styles.preloader} src={preloader}/>
+        <img className={styles.preloader} src={preloader} alt={'Preloader'}/>
     </div>
 }
 
