@@ -14,7 +14,6 @@ let mapDispatchToProps = (dispatch) => {
         addPost: (newPostText) =>{
             dispatch(addPostActionCreator(newPostText));
         }
-
     }
 }
 
