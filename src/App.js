@@ -18,9 +18,9 @@ class App extends React.Component {
     }
 
     render() {
-            if(!this.props.initialized) {
-                return <Preloader/>
-            }
+        if (!this.props.initialized) {
+            return <Preloader/>
+        }
 
         return (
             <div className='app-wrapper'>
@@ -44,4 +44,4 @@ const mapStateToProps = (state) => ({
 export default compose(
     connect(mapStateToProps, {initializeApp}),
     withRouter
-    )(App);
+)(App);
