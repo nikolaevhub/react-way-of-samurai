@@ -1,7 +1,7 @@
 import React, {Suspense} from 'react';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
-import {BrowserRouter, Route, withRouter} from 'react-router-dom';
+import {BrowserRouter, HashRouter, Route, withRouter} from 'react-router-dom';
 import UsersContainer from "./components/Users/UsersContainer";
 import HeaderContainer from "./components/Header/HeaderContainer";
 import LoginPage from "./components/Login/Login";
@@ -51,10 +51,10 @@ let AppWrapper = compose(
 )(App);
 
 const SocialNetwork = (props) => {
-    return <BrowserRouter>
+    return <HashRouter basename={'/'}>
         <Provider store={store}>
             <AppWrapper/>
         </Provider>
-    </BrowserRouter>
+    </HashRouter>
 }
 export default SocialNetwork;
