@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "578de7afaf740876d38717c9b4dd929b",
+    "revision": "841091e853d13cc5675c2bd3f8692976",
     "url": "/react-way-of-samurai/index.html"
   },
   {
@@ -12,7 +12,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-way-of-samurai/static/css/4.cffe4948.chunk.css"
   },
   {
-    "revision": "f172ba38591235a1823a",
+    "revision": "d758b4a6376a84458c3c",
     "url": "/react-way-of-samurai/static/css/main.0a213f2a.chunk.css"
   },
   {
@@ -32,8 +32,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-way-of-samurai/static/js/4.f4d21ed6.chunk.js"
   },
   {
-    "revision": "f172ba38591235a1823a",
-    "url": "/react-way-of-samurai/static/js/main.6b09a5dc.chunk.js"
+    "revision": "d758b4a6376a84458c3c",
+    "url": "/react-way-of-samurai/static/js/main.57445431.chunk.js"
   },
   {
     "revision": "4efa3146f7b7a8f666e6",
