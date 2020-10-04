@@ -22,6 +22,7 @@ let Users = ({
                                  followingInProgress={followingInProgress}
                                  follow={follow}
                                  unfollow={unfollow}
+                                 key = {user.id}
                     />
                 }
             )
