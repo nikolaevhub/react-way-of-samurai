@@ -1,7 +1,7 @@
 import React, {Suspense} from 'react';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
-import {HashRouter, Route, withRouter} from 'react-router-dom';
+import {BrowserRouter, Redirect, Route, Switch, withRouter} from 'react-router-dom';
 import HeaderContainer from "./components/Header/HeaderContainer";
 import {connect, Provider} from "react-redux";
 import {compose} from "redux";
@@ -30,10 +30,14 @@ class App extends React.Component {
                 <Navbar/>
                 <div className='app-wrapper-content'>
                     <Suspense fallback={<h2>Loading...</h2>}>
-                        <Route path='/profile/:userId?' render={() => <ProfileContainer store={this.props.store}/>}/>
-                        <Route path='/dialogs' render={() => <DialogsContainer store={this.props.store}/>}/>
-                        <Route path='/users' render={() => <UsersContainer/>}/>
-                        <Route path='/login' render={() => <LoginPage/>}/>
+                        <Switch>
+                            <Route exact path="/" render={() => (<Redirect to="/profile"/>)}/>
+                            <Route path='/profile/:userId?' render={() => <ProfileContainer store={this.props.store}/>}/>
+                            <Route path='/dialogs' render={() => <DialogsContainer store={this.props.store}/>}/>
+                            <Route path='/users' render={() => <UsersContainer/>}/>
+                            <Route path='/login' render={() => <LoginPage/>}/>
+                            <Route path='*' render={() => <div>404 Not Found</div>}/>
+                        </Switch>
                     </Suspense>
                 </div>
             </div>
@@ -51,10 +55,10 @@ let AppWrapper = compose(
 )(App);
 
 const SocialNetwork = (props) => {
-    return <HashRouter basename={'/'}>
+    return <BrowserRouter>
         <Provider store={store}>
             <AppWrapper/>
         </Provider>
-    </HashRouter>
+    </BrowserRouter>
 }
 export default SocialNetwork;

@@ -1,16 +1,33 @@
 .header {
     grid-area: h;
-    background-color: green;
+    background-color: rgba(181, 217, 234, 0.5);
+    border: 1px solid lightslategrey;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 2fr 8fr 2fr;
+    grid-gap: 10px;
 }
 
-header img {
-    width: 60px;
+.header img {
+    width: 55px;
+}
+
+.logoContainer{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-left: 15px;
 }
 
 .loginBlock {
-    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 15px;
+}
+.loginBlock a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
 }
 
-.loginBlock a {
-    color: white;
-}

@@ -4,7 +4,9 @@
   "private": true,
   "homepage": "https://nikolaevhub.github.io/react-way-of-samurai/",
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
     "axios": "^0.20.0",
+    "classnames": "^2.2.6",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-redux": "^6.0.0",

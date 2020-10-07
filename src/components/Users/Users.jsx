@@ -12,7 +12,7 @@ let Users = ({
                  follow, unfollow
              }) => {
     return <div>
-        <Paginator totalUsersCount={totalUsersCount}
+        <Paginator totalItemsCount={totalUsersCount}
                    pageSize={pageSize}
                    currentPage={currentPage}
                    onPageChanged={onPageChanged}/>
@@ -22,7 +22,7 @@ let Users = ({
                                  followingInProgress={followingInProgress}
                                  follow={follow}
                                  unfollow={unfollow}
-                                 key = {user.id}
+                                 key={user.id}
                     />
                 }
             )
