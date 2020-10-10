@@ -1,26 +1,26 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c41491253f5f9d5590e2ce57e952469b",
+    "revision": "ae2655c294c1e99c6b5463064d498240",
     "url": "/react-way-of-samurai/index.html"
   },
   {
-    "revision": "350c7f380c591ef61560",
+    "revision": "75f25acd53c2d302133c",
     "url": "/react-way-of-samurai/static/css/4.82104d41.chunk.css"
   },
   {
-    "revision": "65b0dc3196a419115b74",
+    "revision": "44c37ace667dfe38630a",
     "url": "/react-way-of-samurai/static/css/5.3e29b979.chunk.css"
   },
   {
-    "revision": "006d8796c29fc7abbaf0",
+    "revision": "d3703a39c78d07d03999",
     "url": "/react-way-of-samurai/static/css/6.ebd439f4.chunk.css"
   },
   {
-    "revision": "24a4d84da17757f5b464",
+    "revision": "e74dc08188afdca4dc6a",
     "url": "/react-way-of-samurai/static/css/7.912484c9.chunk.css"
   },
   {
-    "revision": "db3b517870c8cb3435a2",
+    "revision": "ea4159cd93860ad691af",
     "url": "/react-way-of-samurai/static/css/main.ce78b5e3.chunk.css"
   },
   {
@@ -28,40 +28,40 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-way-of-samurai/static/js/0.513827c5.chunk.js"
   },
   {
-    "revision": "0ba2450d194268964e39",
-    "url": "/react-way-of-samurai/static/js/3.d673dc76.chunk.js"
+    "revision": "442d777c6ff1612b7356",
+    "url": "/react-way-of-samurai/static/js/3.d033d849.chunk.js"
   },
   {
     "revision": "0749163b59fbee32225059cb60c18af6",
-    "url": "/react-way-of-samurai/static/js/3.d673dc76.chunk.js.LICENSE.txt"
+    "url": "/react-way-of-samurai/static/js/3.d033d849.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "350c7f380c591ef61560",
-    "url": "/react-way-of-samurai/static/js/4.9fa1993c.chunk.js"
+    "revision": "75f25acd53c2d302133c",
+    "url": "/react-way-of-samurai/static/js/4.b87f05a1.chunk.js"
   },
   {
-    "revision": "65b0dc3196a419115b74",
-    "url": "/react-way-of-samurai/static/js/5.a0de4e84.chunk.js"
+    "revision": "44c37ace667dfe38630a",
+    "url": "/react-way-of-samurai/static/js/5.9c9dd643.chunk.js"
   },
   {
     "revision": "81896c98bac7b5b16ab1d3790da5b937",
-    "url": "/react-way-of-samurai/static/js/5.a0de4e84.chunk.js.LICENSE.txt"
+    "url": "/react-way-of-samurai/static/js/5.9c9dd643.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "006d8796c29fc7abbaf0",
-    "url": "/react-way-of-samurai/static/js/6.05a9c522.chunk.js"
+    "revision": "d3703a39c78d07d03999",
+    "url": "/react-way-of-samurai/static/js/6.f3df876d.chunk.js"
   },
   {
-    "revision": "24a4d84da17757f5b464",
-    "url": "/react-way-of-samurai/static/js/7.f9644de5.chunk.js"
+    "revision": "e74dc08188afdca4dc6a",
+    "url": "/react-way-of-samurai/static/js/7.70211dea.chunk.js"
   },
   {
-    "revision": "db3b517870c8cb3435a2",
-    "url": "/react-way-of-samurai/static/js/main.9143fa70.chunk.js"
+    "revision": "ea4159cd93860ad691af",
+    "url": "/react-way-of-samurai/static/js/main.64024337.chunk.js"
   },
   {
-    "revision": "cf4f2d7c07ac8f8e6cee",
-    "url": "/react-way-of-samurai/static/js/runtime-main.a073c5fa.js"
+    "revision": "0c4c6883758852bff55f",
+    "url": "/react-way-of-samurai/static/js/runtime-main.a90be7bd.js"
   },
   {
     "revision": "5f5a262cae1e69ebd1ca1613d5097969",
