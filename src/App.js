@@ -1,7 +1,7 @@
 import React, {Suspense} from 'react';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
-import {BrowserRouter, Redirect, Route, Switch, withRouter} from 'react-router-dom';
+import { HashRouter, Redirect, Route, Switch, withRouter} from 'react-router-dom';
 import HeaderContainer from "./components/Header/HeaderContainer";
 import {connect, Provider} from "react-redux";
 import {compose} from "redux";
@@ -55,10 +55,10 @@ let AppWrapper = compose(
 )(App);
 
 const SocialNetwork = (props) => {
-    return <BrowserRouter>
+    return <HashRouter basename={'/'}>
         <Provider store={store}>
             <AppWrapper/>
         </Provider>
-    </BrowserRouter>
+    </HashRouter>
 }
 export default SocialNetwork;

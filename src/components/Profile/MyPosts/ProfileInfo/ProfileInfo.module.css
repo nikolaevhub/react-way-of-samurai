@@ -2,8 +2,19 @@ img {
     width: 100%;
 }
 .avatar {
-    max-width: 100px;
+    max-width: 150px;
+    border-radius: 10px;
 }
 .contact{
     margin-left: 20px;
+}
+.profileInfoContainer{
+    display: grid;
+    grid-template-columns: 1fr 30% 1fr 1fr 1fr;
+    gap: 10px 10px;
+    grid-template-areas:
+    ". . . ."
+}
+.avatarContainer input {
+    max-width: 118px;
 }

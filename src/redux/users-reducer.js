@@ -15,7 +15,7 @@ let initialState = {
     totalUsersCount: 0,
     currentPage: 1,
     isFetching: false,
-    followingInProgress: false
+    followingInProgress: []
 }
 
 const usersReducer = (state = initialState, action) => {
@@ -55,19 +55,35 @@ const usersReducer = (state = initialState, action) => {
             return {
                 ...state,
                 followingInProgress: action.isFetching
+                    ? [...state.followingInProgress, action.userId]
+                    : state.followingInProgress.filter(id => id !== action.userId)
             }
         default:
             return state;
     }
 }
 
-export const followSuccess = (userId) => {return {type: FOLLOW, userId}}
-export const unfollowSuccess = (userId) => {return {type: UNFOLLOW, userId}}
-export const setUsers = (users) => {return {type: SET_USERS, users}}
-export const setCurrentPage = (currentPage) => {return {type: SET_CURRENT_PAGE, currentPage}}
-export const setTotalUsersCount = (totalCount) => {return {type: SET_TOTAL_USERS_COUNT, count: totalCount}}
-export const toggleIsFetching = (isFetching) => {return {type: TOGGLE_IS_FETCHING, isFetching}}
-export const toggleFollowingProgress = (isFetching) => {return {type: TOGGLE_IS_FOLLOWING_PROGRESS, isFetching}}
+export const followSuccess = (userId) => {
+    return {type: FOLLOW, userId}
+}
+export const unfollowSuccess = (userId) => {
+    return {type: UNFOLLOW, userId}
+}
+export const setUsers = (users) => {
+    return {type: SET_USERS, users}
+}
+export const setCurrentPage = (currentPage) => {
+    return {type: SET_CURRENT_PAGE, currentPage}
+}
+export const setTotalUsersCount = (totalCount) => {
+    return {type: SET_TOTAL_USERS_COUNT, count: totalCount}
+}
+export const toggleIsFetching = (isFetching) => {
+    return {type: TOGGLE_IS_FETCHING, isFetching}
+}
+export const toggleFollowingProgress = (isFetching, userId) => {
+    return {type: TOGGLE_IS_FOLLOWING_PROGRESS, isFetching, userId}
+}
 
 
 export const getUsersThunkCreator = (page, pageSize) => async (dispatch) => {
@@ -80,12 +96,12 @@ export const getUsersThunkCreator = (page, pageSize) => async (dispatch) => {
 }
 
 const followUnfollowFlow = async (dispatch, userId, apiMethod, actionCreator) => {
-    dispatch(toggleFollowingProgress(true));
+    dispatch(toggleFollowingProgress(true, userId));
     let response = await apiMethod(userId);
     if (response.data.resultCode === 0) {
         dispatch(actionCreator(userId))
     }
-    dispatch(toggleFollowingProgress(false));
+    dispatch(toggleFollowingProgress(false, userId));
 }
 
 export const follow = (userId) => async (dispatch) => {

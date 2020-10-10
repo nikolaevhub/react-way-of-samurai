@@ -1,5 +1,5 @@
 import React from "react";
-import s from "./Dialogs.module.css";
+import styles from "./Dialogs.module.css";
 import DialogsItem from "./DialogsItem/DialogsItem";
 import Message from "./Message/Message";
 import {Field, reduxForm} from "redux-form";
@@ -19,11 +19,11 @@ const Dialogs = (props) => {
     }
 
     return (
-        <div className={s.dialogs}>
-            <div className={s.dialogsItems}>
+        <div className={styles.dialogs}>
+            <div className={styles.dialogsItems}>
                 {dialogsElements}
             </div>
-            <div className={s.messages}>
+            <div className={styles.messages}>
                 {messageElements}
                 <NewMessageFormRedux onSubmit={addNewMessage}/>
             </div>

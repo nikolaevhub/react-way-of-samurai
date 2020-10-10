@@ -8,10 +8,10 @@ let initialState = {
         {name: 'Petya', id: 4}
     ],
     messages: [
-        {id: 1, message: 'Медленно минуты уплывают вдаль'},
-        {id: 2, message: 'Встречи с ними ты уже не жди'},
-        {id: 3, message: 'И хотя нам прошлого немного жаль'},
-        {id: 4, message: 'Лучшее конечно впереди'}
+        {id: 1, message: 'First'},
+        {id: 2, message: 'Second'},
+        {id: 3, message: 'Third'},
+        {id: 4, message: 'Fourth'}
     ]
 };
 
@@ -22,12 +22,14 @@ const dialogsReducer = (state = initialState, action) => {
             let body = action.newMessageText
             return {
                 ...state,
-                messages: [...state.messages, {id:8, message: body}]
+                messages: [...state.messages, {id: 8, message: body}]
             };
         default:
             return state;
     }
 }
-export const addMessageActionCreator = (newMessageText) => {return {type: ADD_MESSAGE, newMessageText}}
+export const addMessageActionCreator = (newMessageText) => {
+    return {type: ADD_MESSAGE, newMessageText}
+}
 
 export default dialogsReducer;

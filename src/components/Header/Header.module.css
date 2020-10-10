@@ -15,7 +15,7 @@
 .logoContainer{
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: flex-start;
     margin-left: 15px;
 }
 
@@ -30,4 +30,8 @@
     font-weight: bold;
     text-decoration: none;
 }
+.loginBlock button {
+   float: right;
+}
+
 

@@ -4,6 +4,12 @@
 .pageNumber {
     padding: 2px;
     border: 1px solid grey;
+    border-radius: 5px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+.pageNumber:hover {
+    cursor: pointer;
 }
 
 .pageNumber.selectedPage {
