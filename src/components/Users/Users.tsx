@@ -1,9 +1,27 @@
-import React from "react";
+import React, {FC} from "react";
 import Paginator from "../common/Paginator/Paginator";
 import User from "./User";
 import styles from "./Users.module.css"
+import {UserType} from "../../redux/types/types";
 
-let Users = ({totalUsersCount, pageSize, currentPage, onPageChanged, users, followingInProgress, follow, unfollow}) => {
+type PropsType = {
+    totalUsersCount: number,
+    pageSize: number,
+    currentPage: number,
+    onPageChanged: (pageNumber: number) => void,
+    users: Array<UserType>,
+    followingInProgress: Array<number>,
+    follow: (userId:number) => void,
+    unfollow: (userId:number) => void
+}
+
+const Users: FC<PropsType> = ({totalUsersCount,
+                                  pageSize,
+                                  currentPage,
+                                  onPageChanged, users,
+                                  followingInProgress,
+                                  follow, unfollow,
+                              ...props}) => {
     return <div>
         <div className={styles.paginatorContainer}>
             <Paginator totalItemsCount={totalUsersCount}
