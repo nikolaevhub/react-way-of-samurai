@@ -23,7 +23,6 @@ type MapStateToPropsType = {
     totalUsersCount: number
     users: Array<UserType>
     followingInProgress: Array<number>
-
 }
 
 type OwnPropsType = {
@@ -81,8 +80,6 @@ export default compose(
         follow,
         unfollow,
         getUsersThunkCreator
-    }),
-    withAuthRedirect
-)(UsersContainer);
+    }), withAuthRedirect)(UsersContainer);
 
 

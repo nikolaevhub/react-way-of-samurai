@@ -54,7 +54,7 @@ let AppWrapper = compose(
     withRouter
 )(App);
 
-const SocialNetwork = (props) => {
+const SocialNetwork = () => {
     return <HashRouter basename={'/'}>
         <Provider store={store}>
             <AppWrapper/>
